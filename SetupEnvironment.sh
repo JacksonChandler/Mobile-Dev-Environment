@@ -40,6 +40,40 @@ installFlutterEnv(){
 
 installReactNativeEnv(){
 
+    fi ! brew info node &>/dev/null; then
+        echo "Installing Node"
+        brew install node
+    fi
+
+    fi ! brew info watchman &>/dev/null; then
+        echo "Installing Watchman"
+        brew install watchman
+    fi
+
+    fi ! brew info yarn &>/dev/null; then
+        echo "Installing Yarn"
+        brew install yarn
+    fi
+
+    fi ! brew info nvm &>/dev/null; then
+        echo "Installing NVM"
+        brew install nvm
+    fi
+
+    fi ! brew info corepack &>/dev/null; then
+        echo "Installing Corepack"
+        brew install corepack
+    fi
+
+    fi ! brew info npx &>/dev/null; then
+        echo "Installing NPX"
+        brew install npx
+    fi
+
+    package='npx'
+    if [ `npm list -g | grep -c $package` -eq 0 ]; then
+        npm install $package --no-shrinkwrap
+    fi
 }
 
 installAndroidEnv(){
@@ -90,42 +124,46 @@ installIOSEnv(){
 
 installIonicEnv(){
 
+    fi ! brew info node &>/dev/null; then
+        echo "Installing Node"
+        brew install node
+    fi
+
+    fi ! brew info watchman &>/dev/null; then
+        echo "Installing Watchman"
+        brew install watchman
+    fi
+
+    fi ! brew info yarn &>/dev/null; then
+        echo "Installing Yarn"
+        brew install yarn
+    fi
+
+    fi ! brew info nvm &>/dev/null; then
+        echo "Installing NVM"
+        brew install nvm
+    fi
+
+    fi ! brew info corepack &>/dev/null; then
+        echo "Installing Corepack"
+        brew install corepack
+    fi
+
+    fi ! brew info npx &>/dev/null; then
+        echo "Installing NPX"
+        brew install npx
+    fi
+
+    package='npx'
+    if [ `npm list -g | grep -c $package` -eq 0 ]; then
+        npm install $package --no-shrinkwrap
+    fi
+
 }
 
-fi ! brew info node &>/dev/null; then
-    echo "Installing Node"
-    brew install node
-fi
 
-fi ! brew info watchman &>/dev/null; then
-    echo "Installing Watchman"
-    brew install watchman
-fi
 
-fi ! brew info yarn &>/dev/null; then
-    echo "Installing Yarn"
-    brew install yarn
-fi
 
-fi ! brew info nvm &>/dev/null; then
-    echo "Installing NVM"
-    brew install nvm
-fi
-
-fi ! brew info corepack &>/dev/null; then
-    echo "Installing Corepack"
-    brew install corepack
-fi
-
-fi ! brew info npx &>/dev/null; then
-    echo "Installing NPX"
-    brew install npx
-fi
-
-package='npx'
-if [ `npm list -g | grep -c $package` -eq 0 ]; then
-    npm install $package --no-shrinkwrap
-fi
 
 
 
